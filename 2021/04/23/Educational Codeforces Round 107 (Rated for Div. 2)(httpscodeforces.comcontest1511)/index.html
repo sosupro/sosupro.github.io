@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  <link rel="icon" href="">
+  <title>松鼠的小站</title>
+  <meta name="author" content="sosusosu" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="" />
+  
+  <meta name="description" content="Educational Codeforces Round 107 (Rated for Div. 2)(https:&#x2F;&#x2F;codeforces.com&#x2F;contest&#x2F;1511)A Review Site题目大意：A就不写题意了。 解法：分票，down全给一台，剩下的全给一台，所以答案就是n-down的数量。 12345678910111213141516171819#include&lt;bits">
+<meta property="og:type" content="article">
+<meta property="og:title" content="松鼠的小站">
+<meta property="og:url" content="http://sosupro.github.io/2021/04/23/Educational%20Codeforces%20Round%20107%20(Rated%20for%20Div.%202)(httpscodeforces.comcontest1511)/index.html">
+<meta property="og:site_name" content="松鼠的小站">
+<meta property="og:description" content="Educational Codeforces Round 107 (Rated for Div. 2)(https:&#x2F;&#x2F;codeforces.com&#x2F;contest&#x2F;1511)A Review Site题目大意：A就不写题意了。 解法：分票，down全给一台，剩下的全给一台，所以答案就是n-down的数量。 12345678910111213141516171819#include&lt;bits">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://sosupro.github.io/null">
+<meta property="article:published_time" content="2021-04-22T16:30:07.807Z">
+<meta property="article:modified_time" content="2021-04-13T15:53:35.365Z">
+<meta property="article:author" content="sosusosu">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://sosupro.github.io/null">
+<meta name="twitter:site" content="@null">
+  
+  <!-- 站点验证相关 -->
+  
+    
+    
+    
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kratosr.min.css" type="text/css" media="all">
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/light.min.css" type="text/css" media="all">
+  
+  
+  <link rel="stylesheet" id="fontawe-css" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="nprogress-css" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" type="text/css" media="all">
+  
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+  
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  
+    <link rel="stylesheet" id="darkmode-css" href="/css/kr-dark.min.css" type="text/css" media="all">
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/qrcode_js@1.0.0/qrcode.min.js"></script>
+  
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="松鼠的小站" type="application/atom+xml">
+</head>
+
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                                    
+                                        <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
+                                    
+                                
+                                    
+                                        <li><a href="/archives/"><i class="fa fa-file"></i>档案馆</a></li>
+                                    
+                                
+                                    
+                                        <li><a href="/friends/"><i class="fa fa-paw"></i>好伙伴</a></li>
+                                    
+                                
+                                    
+                                        <li>
+                                            <a><i class="fa fa-link"></i>链接</a>
+                                            <ul class="sub-menu">
+                                                
+                                                    
+                                                
+                                                    
+                                                        <li><a target="_blank" rel="noopener" href="https://codeforces.com/profile/sosusosu">codeforces</a></li>
+                                                    
+                                                
+                                                    
+                                                        <li><a target="_blank" rel="noopener" href="https://space.bilibili.com/30504322">bilibili</a></li>
+                                                    
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">松鼠的小站</a></div>
+                    <div class="nav-toggle">
+                        <a class="kratos-nav-toggle js-kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>松鼠的小站</h2> <br />
+                        <span>优质坚果提供地</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+                    
+
+        <section class="col-md-8">
+    <article>
+        <div class="kratos-hentry kratos-post-inner clearfix">
+            <header class="kratos-entry-header">
+                <h1 class="kratos-entry-title text-center"></h1>
+                
+                <ul class="kratos-post-meta text-center">
+                    <li><i class="fa fa-calendar"></i> 2021-04-23</li>
+                    <li><i class="fa fa-user"></i> 作者 sosusosu</li>
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~10.13K
+                        
+                        字
+                    </li>
+                    
+                </ul>
+            </header>
+            <div class="kratos-post-content">
+                <div id="expire-alert" class="alert alert-warning hidden" role="alert">
+                    本文最后编辑于 <time datetime="1618329215365"></time> 前，其中的内容可能需要更新。
+                </div>
+                
+                <hr />
+                <h1 id="Educational-Codeforces-Round-107-Rated-for-Div-2-https-codeforces-com-contest-1511"><a href="#Educational-Codeforces-Round-107-Rated-for-Div-2-https-codeforces-com-contest-1511" class="headerlink" title="Educational Codeforces Round 107 (Rated for Div. 2)(https://codeforces.com/contest/1511)"></a>Educational Codeforces Round 107 (Rated for Div. 2)(<a target="_blank" rel="noopener" href="https://codeforces.com/contest/1511">https://codeforces.com/contest/1511</a>)</h1><h2 id="A-Review-Site"><a href="#A-Review-Site" class="headerlink" title="A Review Site"></a>A <a target="_blank" rel="noopener" href="https://codeforces.com/contest/1511/problem/A">Review Site</a></h2><p>题目大意：A就不写题意了。</p>
+<p>解法：分票，down全给一台，剩下的全给一台，所以答案就是n-down的数量。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> T, n, a[<span class="number">55</span>], n1, n2;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    cin &gt;&gt; T;</span><br><span class="line">    <span class="keyword">while</span>(T--)&#123;</span><br><span class="line">        cin &gt;&gt; n, n1 = n2 = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)&#123;</span><br><span class="line">            cin &gt;&gt; a[i]; </span><br><span class="line">            <span class="keyword">if</span>(a[i] == <span class="number">1</span>) n1++;</span><br><span class="line">            <span class="keyword">if</span>(a[i] == <span class="number">2</span>) n2++;</span><br><span class="line">            <span class="keyword">if</span>(a[i] == <span class="number">3</span>) n1++;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; n1 &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="B-GCD-Length"><a href="#B-GCD-Length" class="headerlink" title="B GCD Length"></a>B <a target="_blank" rel="noopener" href="https://codeforces.com/contest/1511/problem/B">GCD Length</a></h2><p>题目大意：B还挺好玩，构造两个数，第一个数a位，第二个数b位，他们的gcd是c位。</p>
+<p>解法：有很多种构造方法，我用的是三个数2,3,5；用2的次幂来构造gcd，用gcd×3的次幂构造第一个数，gcd×5的次幂来构造第二个数。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> T, a, b, c;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cal</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ret = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(x) ret += <span class="number">1</span>, x /= <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    cin &gt;&gt; T;</span><br><span class="line">    <span class="keyword">while</span>(T--)&#123;</span><br><span class="line">        cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;</span><br><span class="line">        <span class="comment">//2, 3, 5</span></span><br><span class="line">        <span class="keyword">long</span> <span class="keyword">long</span> base = <span class="number">5</span>, n, m;</span><br><span class="line">        <span class="keyword">while</span>(<span class="built_in">cal</span>(base) &lt; c) base *= <span class="number">5</span>;</span><br><span class="line">        n = m = base;</span><br><span class="line">        <span class="keyword">while</span>(<span class="built_in">cal</span>(n) &lt; a) n *= <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">while</span>(<span class="built_in">cal</span>(m) &lt; b) m *= <span class="number">3</span>;</span><br><span class="line">        cout &lt;&lt; n &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; m &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="C-Yet-Another-Card-Deck"><a href="#C-Yet-Another-Card-Deck" class="headerlink" title="C Yet Another Card Deck"></a>C <a target="_blank" rel="noopener" href="https://codeforces.com/contest/1511/problem/C">Yet Another Card Deck</a></h2><p>题目大意：有一堆牌，牌的种类最多50种，每次操作抽出某种牌最靠近牌堆顶的一张，输出这张是从顶往下数第几张，然后把这张牌放在牌堆顶。</p>
+<p>解法：由于种类很少，所以直接模拟就ok，只要处理某一个种类的牌第一次抽是第几张就好了，剩下的情况因为种类过少所以一定存在某一种类会抽很多次，当某一种类被抽过一次之后他就一直在顶上那个范围了，所以硬爆其实也没多少。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, q, x, num;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a[<span class="number">300005</span>], color[<span class="number">105</span>], st[<span class="number">105</span>], v[<span class="number">105</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= <span class="number">100</span>; i ++) color[i] = <span class="number">1e9</span>;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; q;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i ++)</span><br><span class="line">        cin &gt;&gt; a[i], color[a[i]] = <span class="built_in">min</span>(color[a[i]], i), st[a[i]] = color[a[i]];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= q; i ++)&#123;</span><br><span class="line">        cin &gt;&gt; x;</span><br><span class="line">        <span class="keyword">if</span>(!v[x])&#123;</span><br><span class="line">            num = <span class="number">0</span>, v[x] = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= <span class="number">50</span>; j++) <span class="keyword">if</span>(v[j] &amp;&amp; st[j] &gt; st[x]) num++;</span><br><span class="line">            color[x] += num;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= <span class="number">50</span>; j++) <span class="keyword">if</span>(j != x &amp;&amp; v[j] &amp;&amp; color[j] &lt; color[x]) color[j]++;</span><br><span class="line">        cout &lt;&lt; color[x] &lt;&lt; <span class="string">&#x27; &#x27;</span>, color[x] = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="D-Min-Cost-String"><a href="#D-Min-Cost-String" class="headerlink" title="D Min Cost String"></a>D <a target="_blank" rel="noopener" href="https://codeforces.com/contest/1511/problem/D">Min Cost String</a></h2><p>题目大意：D题需要构造一个代价最小的序列，一个序列的代价是满足如下条件：(si=sj且si+1=sj+1且i!=j)的(i,j)点对数。</p>
+<p>解法：由于题意要求，有影响的只跟相邻两字母组成的二元组出现次数有关，手玩一下字符集比较小的情况，发现这样的二元组共有n×n种，而且这n×n个二元组可以不产生代价的出现在同一个序列中，比如字符集为3的情况，可以构造aabacbbc，这样是最优的情况，而最优序列显然是这样的一个序列重复出现。得到这样的猜测之后直接写个暴力dfs搜一下，发现所有的字符集都可以这样搜出来，那么我们这个做法就没有任何问题了。直接搜一个最优串，让这个串不停地重复出现就得到了答案。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, k, num[<span class="number">30</span>], a[<span class="number">200005</span>], w[<span class="number">200005</span>], mx, fl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">bool</span> vis[<span class="number">30</span>][<span class="number">30</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(fl) <span class="keyword">return</span>;</span><br><span class="line">    w[y] = x;</span><br><span class="line">    <span class="keyword">if</span>(y == k * k)&#123;</span><br><span class="line">        fl = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++) <span class="keyword">if</span>(!vis[x][i] &amp;&amp; !fl)</span><br><span class="line">        vis[x][i] = <span class="number">1</span>, <span class="built_in">dfs</span>(i, y + <span class="number">1</span>), vis[x][i] = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; k;</span><br><span class="line">    <span class="built_in">dfs</span>(<span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) cout &lt;&lt; (<span class="keyword">char</span>)(<span class="string">&#x27;a&#x27;</span> + w[i % (k * k)]);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="E-Colorings-and-Dominoes"><a href="#E-Colorings-and-Dominoes" class="headerlink" title="E Colorings and Dominoes"></a>E <a target="_blank" rel="noopener" href="https://codeforces.com/contest/1511/problem/E">Colorings and Dominoes</a></h2><p>题目大意：一张图n行m列，有w个白色格子和n*m-w个黑色格子，黑色格子无法操作，白色格子可以涂成蓝色或者红色，然后如果有两个蓝色的格子竖着放在一起，那么他们两个上就可以放一个2×1的钻石，如果两个红色的格子横着放在一起，他们两个上边就可以放一个1×2的钻石，最后问所有的红蓝染色方案中，每个方案都按最大的放钻石方案放钻石，能放的钻石和是多少(任意方案都是最优的放置数量，要求的是所有方案的放置数量之和)。</p>
+<p>解法：观察题面，可以将问题从 每个方案的数量和 转化为 求每个钻石所存在的方案数，然后找到所有能放的钻石，把每个钻石的方案数加起来。有了这个之后下来就解决最优放置的问题，实际上只要对于一排(或者一列)连续的白色格子，我们在这一排(或者一列)通过染色放置的钻石是最优的情况，那么剩下的点染什么色放什么钻石是剩下的点要考虑的事情，而每一种染色方案都一定可以得到一个对于那个方案的最优解，那样的解是无法影响我当前这连续的一排(或一列)格子的放置方案，所以这个题目就又被拆分成如下情况：当前有一排(或一列)连续的白色格子共k个，那么这k个格子对答案产生的贡献就是cal(k)*(2^(w-k))，我们只要分行和列分别讨论就可以得到结果。</p>
+<p>接下来来解决这个cal(k)，这个东西咋整呢？因为k值和cal(k)是一一对应的，就可以把他当成一个数列，目测他是一个很有规律的东西，可以直接爆它的前几项，然后去OEIS一下，我们就得到这样一个数列：<a target="_blank" rel="noopener" href="http://oeis.org/A045883">a(n) = ((3*n+1)*2^n - (-1)^n)/9</a>，然后就可以做啦！</p>
+<p>不过OEIS实际上还是有点偏移我们之前分析出来的情况，如果从头开始重新考虑，对于连续的k个白色方块，我们可以放置钻石的位置实际上只有k-1个，而我在最后k的位置上放置钻石的方案数实际上是只跟1<del>k-2这些格子合法放置有关的，而之前在放置1</del>k-2这么多个格子的钻石的时候，我们是算过一部分和当前这两个格子有关的方案数的，于是dp[k]=dp[k-2]+(2^(w-k))就是现在的贡献，之后因为每个钻石都是占两个格子的，所以需要分奇偶讨论一下，这里就不做过多赘述了。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mo 998244353</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">a(n) = ((3*n+1)*2^n - (-1)^n)/9.</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> a[<span class="number">300005</span>], ans, inv9, num;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m;</span><br><span class="line"></span><br><span class="line">string s[<span class="number">300005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">qpow</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> x, <span class="keyword">long</span> <span class="keyword">long</span> y)</span></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> ret = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(y)&#123;</span><br><span class="line">        <span class="keyword">if</span>(y &amp; <span class="number">1</span>) ret *= x, ret %= mo;</span><br><span class="line">        x *= x, x %= mo, y &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    inv9 = <span class="built_in">qpow</span>(<span class="number">9</span>, mo - <span class="number">2</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">long</span> <span class="keyword">long</span> i = <span class="number">1</span>; i &lt;= <span class="number">300000</span>; i++)&#123;</span><br><span class="line">        a[i] = (((<span class="number">3</span> * i + <span class="number">1</span>) * <span class="built_in">qpow</span>(<span class="number">2LL</span>, i) % mo - <span class="built_in">qpow</span>(<span class="number">-1LL</span>, i) + mo) % mo * inv9 % mo);</span><br><span class="line">        a[i] = (a[i] + mo) % mo;</span><br><span class="line">    &#125;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) cin &gt;&gt; s[i];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; m; j++) num += s[i][j] == <span class="string">&#x27;o&#x27;</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)&#123;</span><br><span class="line">        <span class="keyword">int</span> pro = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; m; j++)&#123; </span><br><span class="line">            <span class="keyword">if</span>(s[i][j] == <span class="string">&#x27;o&#x27;</span>) pro++;</span><br><span class="line">            <span class="keyword">if</span>(s[i][j] == <span class="string">&#x27;*&#x27;</span> || j == m - <span class="number">1</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(pro)&#123;</span><br><span class="line">                    ans += a[pro - <span class="number">1</span>] * <span class="built_in">qpow</span>(<span class="number">2</span>, num - pro) % mo, ans %= mo;</span><br><span class="line">                &#125;</span><br><span class="line">                pro = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; m; j++)&#123;</span><br><span class="line">        <span class="keyword">int</span> pro = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s[i][j] == <span class="string">&#x27;o&#x27;</span>) pro++;</span><br><span class="line">            <span class="keyword">if</span>(s[i][j] == <span class="string">&#x27;*&#x27;</span> || i == n)&#123;</span><br><span class="line">                <span class="keyword">if</span>(pro)&#123;</span><br><span class="line">                    ans += a[pro - <span class="number">1</span>] * <span class="built_in">qpow</span>(<span class="number">2</span>, num - pro) % mo, ans %= mo;</span><br><span class="line">                &#125;</span><br><span class="line">                pro = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="F-Chainword"><a href="#F-Chainword" class="headerlink" title="F Chainword"></a>F <a target="_blank" rel="noopener" href="https://codeforces.com/contest/1511/problem/F">Chainword</a></h2><p>题目大意：给了一个字典，有几个串，最后要使用这给出的几个串拼一个长为m的串，这样一个串具有以下三个属性(s，X，Y)，其中s是长为m的字符串，然后将这个长为m的串使用两种方式划分开，每一种方式划分出来的子串都要是字典中存在的串，第一种划分方式成为X，第二种划分方式成为Y。如果说两个串的三个属性中有任何一个不同，那么就说这两个串是不同的，最终要求出的是所有不同的串的数量。</p>
+<p>解法：首先提一下，一张图的邻接矩阵自乘k步之后，i行j列表示的数就是从i点经过k步走到j点的方案数。</p>
+<p>通过这样的性质，我们重新回来看这道题目，一个字符串具有三个属性，s，X，Y，第一个属性最好处理，只要字符不一样就好了，接下来我们来处理剩下的两个属性。我们将每一个不同的字符串都当做一个点，比如说字符串这三个aa，aaa，aab，现在我们将其看做三个点，当某一个串可以组成另一个串时，就在他们之间连一条边，比如点aa向点aaa连边，点aa向点aab连边，但是aaa显然不能组成aab，所以点aab和aaa之间是没有边的；而空字符串要向所有的单个字母构成的字符串连边。在我们将整个字符串问题转化为图的问题之后，就可以通过矩阵自乘来得到相应长度的方案。之后我们再回来看这个题目的两个属性，显然最后字符串结束的时候，也就是字符串的后缀一定是某一个字典串，故而我们可以通过字典树也就是trie树来简化图中的点的情况，我们只需要有用的字符串(因为如果我们构造出了某一个无法被字典树识别的子串，那么显然这个串也无法构成字典里的任何一个串或者被字典里的串构成)。如果我们只看属性X，那么用字典树中的ncnt个节点建图，将空字符串作为root点，且只给字典串中的结尾部分赋值为1，那么这样一个图的邻接矩阵自乘m步之后，矩阵中root行root列就是长为m的串，所有的划分的方案数。如果再添加第二个属性Y，无非就是将这两个属性分开来算，当两个属性同时满足的时候才赋值1，否则赋值0，整张图的点数就是ncnt*ncnt(每一个为了解决X属性的串都要对应一个解决Y属性的串)。</p>
+<p>其实前边说了很多都是为了解释为什么矩阵快速幂在字典树上跑的正确性，真正到这个题，就是看当前满足X属性的串x和满足Y属性的串y，这样的二元组(x，y)如何向下转移。为了满足s属性，我们枚举下一个字符d，而在x串后接字符d组成的新串我们设它为dx，同理，y对应的就是dy，假如dx和dy都是完整的字典串(意味着划分到这里就划了一下，下个字符开始就是新的一个字典串了)，那么可以直接向(root,root)也就是情况x串和y串可以通过下一个字符d转移到答案；同理假如dx是一个字典串，那么可以向(root,dy)转移(即x这里划分划了一下，但是Y没有划分开)；假如dy是一个字典串，那么可以向(dx,root)转移；当然也可以继续向下转移(dx,dy)，也就是在这里X和Y都没有划分。</p>
+<p>在得到这样的初始矩阵之后只需要自乘m步最后输出root行root列的答案就好了。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mo 998244353</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m, num[<span class="number">55</span>], ch[<span class="number">55</span>][<span class="number">55</span>], ncnt, cnt, rt;</span><br><span class="line"></span><br><span class="line">map&lt;pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;, <span class="keyword">int</span>&gt; tu;</span><br><span class="line"></span><br><span class="line">string s;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Mat</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">305</span>][<span class="number">305</span>];</span><br><span class="line">&#125;ans;</span><br><span class="line"></span><br><span class="line">Mat <span class="keyword">operator</span> * (<span class="keyword">const</span> Mat &amp;x, <span class="keyword">const</span> Mat &amp;y)&#123;</span><br><span class="line">	Mat ret;</span><br><span class="line">	<span class="built_in">memset</span>(ret.a, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(ret.a));</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= cnt; i++) <span class="keyword">for</span>(<span class="keyword">int</span> k = <span class="number">1</span>; k &lt;= cnt; k++)</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= cnt; j++)</span><br><span class="line">			ret.a[i][j] += <span class="number">1ll</span> * x.a[i][k] * y.a[k][j] % mo, ret.a[i][j] %= mo;</span><br><span class="line">	<span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Mat <span class="title">qpow</span><span class="params">(Mat x, <span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">	Mat ret;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= cnt; i++) <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= cnt; j++)</span><br><span class="line">		ret.a[i][j] = (i == j);</span><br><span class="line">	<span class="keyword">while</span>(y)&#123;</span><br><span class="line">		<span class="keyword">if</span>(y &amp; <span class="number">1</span>) ret = ret * x;</span><br><span class="line">		x = x * x, y &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(tu[&#123;x, y&#125;]) <span class="keyword">return</span> tu[&#123;x, y&#125;];</span><br><span class="line">    tu[&#123;x, y&#125;] = ++cnt;</span><br><span class="line">    <span class="keyword">int</span> pro = cnt;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">26</span>; i++)</span><br><span class="line">		<span class="keyword">if</span>(ch[x][i] &amp;&amp; ch[y][i])&#123;</span><br><span class="line">			<span class="keyword">int</span> dx = ch[x][i], dy = ch[y][i];</span><br><span class="line">			ans.a[pro][<span class="built_in">dfs</span>(<span class="number">0</span>, <span class="number">0</span>)] += num[dx] * num[dy];</span><br><span class="line">			ans.a[pro][<span class="built_in">dfs</span>(dx, <span class="number">0</span>)] += num[dy];</span><br><span class="line">			ans.a[pro][<span class="built_in">dfs</span>(<span class="number">0</span>, dy)] += num[dx];</span><br><span class="line">			ans.a[pro][<span class="built_in">dfs</span>(dx, dy)] += <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	<span class="keyword">return</span> pro;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)&#123;</span><br><span class="line">		cin &gt;&gt; s, rt = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> j: s)&#123;</span><br><span class="line">            <span class="keyword">if</span> (!ch[rt][j - <span class="string">&#x27;a&#x27;</span>]) ch[rt][j - <span class="string">&#x27;a&#x27;</span>] = ++ncnt;</span><br><span class="line">            rt = ch[rt][j - <span class="string">&#x27;a&#x27;</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        ++num[rt];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">dfs</span>(<span class="number">0</span>, <span class="number">0</span>), ans = <span class="built_in">qpow</span>(ans, m), cout &lt;&lt; ans.a[<span class="number">1</span>][<span class="number">1</span>] &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="G-Chips-on-a-Board"><a href="#G-Chips-on-a-Board" class="headerlink" title="G Chips on a Board"></a>G <a target="_blank" rel="noopener" href="https://codeforces.com/contest/1511/problem/G">Chips on a Board</a></h2><p>题目大意：nim游戏，n堆石子，每堆最多m个，q组询问，每次询问得到石子数目区间在[l,r]的石子堆共k堆，然后询问这k堆石子堆每堆石子数目都减去l的之后的k堆石子做nim游戏的答案，询问互相独立，当前做的操作不会影响别的询问(这里并没有按照原来的语言描述题面，换了数学意义等价的描述方式)。</p>
+<p>解法：观察题面，发现每次实际上就是找一个区间，然后对区间的每一个数做差之后进行异或求异或和，那实际上通过O3优化，avx2指令集优化以及使用GUNC++17(64)，4e10的数据也会被优化的飞快，所以暴力就过了。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">&quot;O3&quot;</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC target(<span class="meta-string">&quot;avx2&quot;</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m, a[<span class="number">200005</span>], ans, l, r, x, ii;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;n, &amp;m), a[n + <span class="number">1</span>] = <span class="number">1</span> &lt;&lt; <span class="number">30</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;a[i]);</span><br><span class="line">    <span class="built_in">sort</span>(a + <span class="number">1</span>, a + n + <span class="number">1</span>), <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;m);</span><br><span class="line">    <span class="keyword">while</span>(m--)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;l, &amp;r), x = l;</span><br><span class="line">        r = <span class="built_in">upper_bound</span>(a + <span class="number">1</span>, a + n + <span class="number">1</span>, r) - a;</span><br><span class="line">        l = <span class="built_in">upper_bound</span>(a + <span class="number">1</span>, a + n + <span class="number">1</span>, l) - a;</span><br><span class="line">        <span class="keyword">for</span>(ii = l; ii &lt; r; ++ii) ans ^= a[ii] - x;</span><br><span class="line">        <span class="built_in">putchar</span>(<span class="string">&quot;AB&quot;</span>[ans == <span class="number">0</span>]), ans = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>非暴力解(感谢队友RRRR_wys)：</p>
+<p>按位拆开，每一位都是互相不影响的。f[i][k] 表示从i开始向后延申2^k长度的区间的答案，实际上每个位置异或的数字范围是[0,2^k-1]，然后考虑用f[i][k-1]和f[i+1&lt;&lt;k-1][k-1]合并答案的时候，相当于后边这个区间整体值加上2^(k-1)，其他的低位不变，所以只用考虑 k-1 位的贡献，询问也同样的方式考虑，就得到结果。</p>
+<p><del>这里并没有写这个做法（跑</del></p>
+<p>就没有代码了。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>现场被队友hack了，掉分了(气呼呼</p>
+<p>个人对这场构造题(B，D)的评价还是比较高的，不过现场没有看F题，之后补题的时候感觉有点。。。套路了？G可能出题人都没想到4e10也能跑过吧，有点偏离主旨了。</p>
+<p><del>不过怎么说呢？指令集优化也是算法！</del></p>
+<p>总的来说相比上一场，代码量就会有一部分提升。还行吧。</p>
+
+            </div>
+            
+                <div class="kratos-copyright text-center clearfix">
+                    <h5>本作品采用 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
+                </div>
+            
+            <footer class="kratos-entry-footer clearfix">
+                
+                    <div class="post-like-donate text-center clearfix" id="post-like-donate">
+                    
+                    
+                        <a class="share" href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
+                        <div class="share-wrap" style="display: none;">
+    <div class="share-group">
+        <a href="javascript:;" class="share-plain qq" onclick="share('qq');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-qq"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain qzone" onclick="share('qzone');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-star"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weixin pop style-plain" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weixin"></i>
+            </div>
+            <div class="share-int">
+                <div class="qrcode" id="wechat-qr"></div>
+                <p>打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</p>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weibo" onclick="share('weibo');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weibo"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain facebook style-plain" onclick="share('facebook');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-facebook"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain twitter style-plain" onclick="share('twitter');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-twitter"></i>
+            </div>
+        </a>
+    </div>
+    <script type="text/javascript">
+        $(()=>{
+            new QRCode("wechat-qr", {
+                text: "http://sosupro.github.io/2021/04/23/Educational%20Codeforces%20Round%20107%20(Rated%20for%20Div.%202)(httpscodeforces.comcontest1511)/",
+                width: 150,
+                height: 150,
+                correctLevel : QRCode.CorrectLevel.H
+            });
+        });
+        function share(dest) {
+            const qqBase        = "https://connect.qq.com/widget/shareqq/index.html?";
+            const weiboBase     = "https://service.weibo.com/share/share.php?";
+            const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
+            const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
+            const twitterBase   = "https://twitter.com/intent/tweet?";
+            const hostUrl       = "http://sosupro.github.io/2021/04/23/Educational%20Codeforces%20Round%20107%20(Rated%20for%20Div.%202)(httpscodeforces.comcontest1511)/";
+            const title         = "「」";
+            const excerpt       = `Educational Codeforces Round 107 (Rated for Div. 2)(https://codeforces.com/contest/1511)A Review Site题目大意：A就不写题意了。
+解法...`;
+            let _URL;
+            switch (dest) {
+                case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
+                case "weibo"    : _URL = weiboBase+"url="+hostUrl+"&title="+title+excerpt;                                 break;
+                case "qzone"    : _URL = qzoneBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";  break;
+                case "facebook" : _URL = facebookBase+"u="+hostUrl;                                                        break;
+                case "twitter"  : _URL = twitterBase+"text="+title+excerpt+"&url="+hostUrl;                                break;
+            }
+            window.open(_URL);
+        };
+    </script>
+</div>
+                    
+                    </div>
+                
+                <div class="footer-tag clearfix">
+                    <div class="pull-left">
+                    <i class="fa fa-tags"></i>
+                        
+                    </div>
+                    <div class="pull-date">
+                    <span>最后编辑：2021-04-13</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
+            <nav class="navigation post-navigation clearfix" role="navigation">
+                
+                <div class="nav-previous clearfix">
+                    <a title=" (无标题)" href="/2021/04/23/Divide by Zero 2021 and Codeforces Round #714 (Div. 2)(httpscodeforces.comcontest1513)/">&lt; 上一篇</a>
+                </div>
+                
+                
+            </nav>
+        
+        
+    </article>
+</section>
+
+                
+            
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/images/avatar.webp" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">一个ICU患者的犯病之路</p>
+    </div>
+</aside>
+            
+                    <div class="sticky-area">
+                
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E9%A1%B9/">杂项</a><span class="category-list-count">1</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/%E6%B0%B4%E6%96%87/" style="font-size: 0.6em;">水文</a>
+      </div>
+  </aside>
+
+            
+                
+  <aside id="krw-posts" class="widget widget-kratos-posts">
+  <h4 class="widget-title"><i class="fa fa-file"></i>最新文章</h4>
+  <div class="tab-content">
+      <ul class="list-group">
+        
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            <a class="list-group-item" href="/2021/04/22/sosusosu-com%E7%A7%BD%E5%9C%9F%E8%BD%AC%E7%94%9F%E4%B8%BAsosusosu-icu/"><i class="fa  fa-book"></i> sosusosu.com秽土转生为sosusosu.icu!</a>
+            
+          
+        
+      </ul>
+  </div>
+  </aside>
+
+            
+    </div>
+</section>
+        
+        </div>
+    </div>
+</div>
+<footer>
+    <div id="footer"  class="ap-lrc"  >
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search/">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="box theme-box" id="darkmode-switch">
+                        <span class="fa fa-adjust"></span>
+                    </div>
+                
+                
+            </div>
+            <div class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                        <li><a href="mailto:3308395526@qq.com"><i class="fa fa-envelope"></i></a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li><a target="_blank" rel="nofollow" href="https://github.com/sosupro"><i class="fa fa-github"></i></a></li>
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2021 松鼠的小站 版权所有.</li>
+                            <li>本站已运行<span id="span_dt">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
+                            <li>Site built with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by sosusosu.</li>
+                        </div>
+                        <div>
+                            <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
+                            <li>Hosted on <a href="https://github.io" target="_blank">Github Pages</a></li>
+                        </div>
+                        <div>
+                            <li><a href="https://beian.miit.gov.cn" rel="external nofollow" target="_blank">ICU备20210101号</a></li>
+                            
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.4/dist/js/bootstrap.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
+<script>const notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));</script>
+
+<script async src="/js/candy.min.js"></script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    <meting-js
+        server="netease"
+        type="playlist"
+        id="5415117912"
+        order="random"
+        fixed="true"
+    >
+    </meting-js>
+
+
+
+    <script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script defer src="/js/kratosr.min.js"></script>
+<script defer src="/js/pjax.min.js"></script>
+
+
+    <script defer src="/js/kr-dark.min.js"></script>
+
+
+
+<!-- Extra support for third-party plguins  -->
+
+
+    </body>
+</html>

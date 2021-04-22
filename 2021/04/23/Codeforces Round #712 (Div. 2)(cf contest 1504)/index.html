@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  <link rel="icon" href="">
+  <title>松鼠的小站</title>
+  <meta name="author" content="sosusosu" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="" />
+  
+  <meta name="description" content="Codeforces Round #712 (Div. 2)(cf contest 1504)A Déjà Vu题目大意：给字符串添加一个字母a让它不是一个回文串。 解法：扫一遍，只要能加就加。 123456789101112131415161718192021222324252627#include &lt;bits&#x2F;stdc++.h&gt;using namespace std;int T,">
+<meta property="og:type" content="article">
+<meta property="og:title" content="松鼠的小站">
+<meta property="og:url" content="http://sosupro.github.io/2021/04/23/Codeforces%20Round%20#712%20(Div.%202)(cf%20contest%201504)/index.html">
+<meta property="og:site_name" content="松鼠的小站">
+<meta property="og:description" content="Codeforces Round #712 (Div. 2)(cf contest 1504)A Déjà Vu题目大意：给字符串添加一个字母a让它不是一个回文串。 解法：扫一遍，只要能加就加。 123456789101112131415161718192021222324252627#include &lt;bits&#x2F;stdc++.h&gt;using namespace std;int T,">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://sosupro.github.io/null">
+<meta property="article:published_time" content="2021-04-22T16:30:07.759Z">
+<meta property="article:modified_time" content="2021-04-16T10:19:22.468Z">
+<meta property="article:author" content="sosusosu">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://sosupro.github.io/null">
+<meta name="twitter:site" content="@null">
+  
+  <!-- 站点验证相关 -->
+  
+    
+    
+    
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kratosr.min.css" type="text/css" media="all">
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/light.min.css" type="text/css" media="all">
+  
+  
+  <link rel="stylesheet" id="fontawe-css" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="nprogress-css" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" type="text/css" media="all">
+  
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+  
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  
+    <link rel="stylesheet" id="darkmode-css" href="/css/kr-dark.min.css" type="text/css" media="all">
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/qrcode_js@1.0.0/qrcode.min.js"></script>
+  
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="松鼠的小站" type="application/atom+xml">
+</head>
+
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                                    
+                                        <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
+                                    
+                                
+                                    
+                                        <li><a href="/archives/"><i class="fa fa-file"></i>档案馆</a></li>
+                                    
+                                
+                                    
+                                        <li><a href="/friends/"><i class="fa fa-paw"></i>好伙伴</a></li>
+                                    
+                                
+                                    
+                                        <li>
+                                            <a><i class="fa fa-link"></i>链接</a>
+                                            <ul class="sub-menu">
+                                                
+                                                    
+                                                
+                                                    
+                                                        <li><a target="_blank" rel="noopener" href="https://codeforces.com/profile/sosusosu">codeforces</a></li>
+                                                    
+                                                
+                                                    
+                                                        <li><a target="_blank" rel="noopener" href="https://space.bilibili.com/30504322">bilibili</a></li>
+                                                    
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">松鼠的小站</a></div>
+                    <div class="nav-toggle">
+                        <a class="kratos-nav-toggle js-kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>松鼠的小站</h2> <br />
+                        <span>优质坚果提供地</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+                    
+
+        <section class="col-md-8">
+    <article>
+        <div class="kratos-hentry kratos-post-inner clearfix">
+            <header class="kratos-entry-header">
+                <h1 class="kratos-entry-title text-center"></h1>
+                
+                <ul class="kratos-post-meta text-center">
+                    <li><i class="fa fa-calendar"></i> 2021-04-23</li>
+                    <li><i class="fa fa-user"></i> 作者 sosusosu</li>
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~10.27K
+                        
+                        字
+                    </li>
+                    
+                </ul>
+            </header>
+            <div class="kratos-post-content">
+                <div id="expire-alert" class="alert alert-warning hidden" role="alert">
+                    本文最后编辑于 <time datetime="1618568362468"></time> 前，其中的内容可能需要更新。
+                </div>
+                
+                <hr />
+                <h1 id="Codeforces-Round-712-Div-2-cf-contest-1504"><a href="#Codeforces-Round-712-Div-2-cf-contest-1504" class="headerlink" title="Codeforces Round #712 (Div. 2)(cf contest 1504)"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1504">Codeforces Round #712 (Div. 2)</a>(cf contest 1504)</h1><h2 id="A-Deja-Vu"><a href="#A-Deja-Vu" class="headerlink" title="A Déjà Vu"></a>A <a target="_blank" rel="noopener" href="https://codeforces.com/contest/1504/problem/A">Déjà Vu</a></h2><p>题目大意：给字符串添加一个字母a让它不是一个回文串。</p>
+<p>解法：扫一遍，只要能加就加。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> T, ans, n;</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> s[<span class="number">300005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    cin &gt;&gt; T;</span><br><span class="line">    <span class="keyword">while</span>(T--)&#123;</span><br><span class="line">        cin &gt;&gt; s + <span class="number">1</span>, n = <span class="built_in">strlen</span>(s + <span class="number">1</span>), ans = <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) <span class="keyword">if</span>(s[n - i + <span class="number">1</span>] != <span class="string">&#x27;a&#x27;</span>)&#123;</span><br><span class="line">            ans = i;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(ans == <span class="number">-1</span>) <span class="built_in">puts</span>(<span class="string">&quot;NO&quot;</span>);</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="built_in">puts</span>(<span class="string">&quot;YES&quot;</span>);</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(i == ans) cout &lt;&lt; <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">                cout &lt;&lt; s[i];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">puts</span>(<span class="string">&quot;&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="B-Flip-the-Bits"><a href="#B-Flip-the-Bits" class="headerlink" title="B Flip the Bits"></a>B <a target="_blank" rel="noopener" href="https://codeforces.com/contest/1504/problem/B">Flip the Bits</a></h2><p>题目大意：给一个01串，现有操作就是对于当前它的前缀，假如0和1的个数相等，就可以把0变1把1变0，最后要通过操作将A串变成B串。</p>
+<p>解法：观察操作性质，发现任何一次操作都不影响别的点是否可以操作，所以从后往前扫，如果当前A串和B串不匹配，就翻转。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> T, ans, n, num[<span class="number">2</span>][<span class="number">300005</span>], fl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> s[<span class="number">300005</span>], t[<span class="number">300005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    cin &gt;&gt; T;</span><br><span class="line">    <span class="keyword">while</span>(T--)&#123;</span><br><span class="line">        cin &gt;&gt; n &gt;&gt; s + <span class="number">1</span> &gt;&gt; t + <span class="number">1</span>, ans = <span class="number">1</span>, fl = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) num[<span class="number">0</span>][i] = num[<span class="number">0</span>][i - <span class="number">1</span>], num[<span class="number">1</span>][i] = num[<span class="number">1</span>][i - <span class="number">1</span>], num[s[i] == <span class="string">&#x27;1&#x27;</span>][i]++;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = n; i; i--)&#123;</span><br><span class="line">            <span class="keyword">if</span>((s[i] != t[i]) == (fl))&#123;</span><br><span class="line">                <span class="keyword">if</span>(num[<span class="number">1</span>][i] != num[<span class="number">0</span>][i])&#123;</span><br><span class="line">                    ans = <span class="number">0</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> fl = !fl;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">puts</span>(ans ? <span class="string">&quot;YES&quot;</span> : <span class="string">&quot;NO&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="C-Balance-the-Bits"><a href="#C-Balance-the-Bits" class="headerlink" title="C Balance the Bits"></a>C <a target="_blank" rel="noopener" href="https://codeforces.com/contest/1504/problem/C">Balance the Bits</a></h2><p>题目大意：需要构造两个可以匹配的括号序列（包含左右括号，括号序列的匹配就是，哎呀去百度一下这里就不写了），首先每个括号序列需要满足给定的位置括号是一样的，剩下位置括号都是相反的（可以看样例，样例是很形象的）。</p>
+<p>解法：实际上说是构造两个个序列，但是由于这两个序列的对应位置要么相同要么不同，所以是两个序列对应的（因为左括号反过来只有右括号一种情况）。之后考虑普通括号序列匹配的条件，我们有了num[右][i]&gt;=num[左][i]且num[右][n]==num[左][n]，其中num[右][i]代表从左到第i个位置，右括号的数量，num[左][i]同理。之后再根据两个序列有一部分是一样的，一部分是截然相反的，那么对于第一个序列，num[右][一样][i]代表从左边到第i个位置，两个序列中都一样的右括号的数量，我们就有了：对于第一个序列num[右][一样][i]+num[右][不一样][i]&gt;=num[左][一样][i]+num[左][不一样][i]，而因为所有不一样的元素都是反着的，所以对于第二个序列我们又有了num[右][一样][i]+num[左][不一样][i]&gt;=num[左][一样][i]+num[右][不一样][i]，而在当i=n时，我们又有num[右][一样][i]+num[右][不一样][i]==num[左][一样][i]+num[左][不一样][i]且num[右][一样][i]+num[左][不一样][i]==num[左][一样][i]+num[右][不一样][i]。</p>
+<p>故而根据上述的式子，我们可以选取一种贪心的策略，那就是尽量确保num[右][一样][i]&gt;num[左][一样][i]且num[右][不一样][i]==num[左][不一样][i]，这样才能更好的满足上述的几个式子，所以我们在两个序列都相同的位置优先填左括号，左括号填完之后再填右括号，而对于两个序列不一样的位置 ，我们一左一右这样填，假如这样填到最后都没法满足条件，那么也就不存在别的情况可以满足了。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> T, ans, n, num[<span class="number">2</span>], fl, w[<span class="number">2</span>][<span class="number">2</span>], cnt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> s[<span class="number">300005</span>], t[<span class="number">300005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    cin &gt;&gt; T;</span><br><span class="line">    <span class="keyword">while</span>(T--)&#123;</span><br><span class="line">        cin &gt;&gt; n &gt;&gt; s + <span class="number">1</span>, fl = ans = <span class="number">1</span>, cnt = num[<span class="number">0</span>] = num[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">        <span class="built_in">memset</span>(w, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(w));</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) num[s[i] == <span class="string">&#x27;1&#x27;</span>]++;</span><br><span class="line">        <span class="keyword">if</span>(num[<span class="number">0</span>] &amp; <span class="number">1</span>)&#123;</span><br><span class="line">            <span class="built_in">puts</span>(<span class="string">&quot;NO&quot;</span>);</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) </span><br><span class="line">            <span class="keyword">if</span>(s[i] == <span class="string">&#x27;1&#x27;</span>)&#123;</span><br><span class="line">                cnt++, t[i] = (cnt &lt;= (num[<span class="number">1</span>] / <span class="number">2</span>)) ? <span class="string">&#x27;(&#x27;</span> : <span class="string">&#x27;)&#x27;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                t[i] = fl ? <span class="string">&#x27;(&#x27;</span> : <span class="string">&#x27;)&#x27;</span>, fl = !fl;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s[i] == <span class="string">&#x27;1&#x27;</span>)&#123;</span><br><span class="line">                w[<span class="number">1</span>][t[i] == <span class="string">&#x27;)&#x27;</span>]++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                w[<span class="number">0</span>][t[i] == <span class="string">&#x27;)&#x27;</span>]++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(w[<span class="number">1</span>][<span class="number">0</span>] + w[<span class="number">0</span>][<span class="number">0</span>] &lt; w[<span class="number">1</span>][<span class="number">1</span>] + w[<span class="number">0</span>][<span class="number">1</span>] || w[<span class="number">1</span>][<span class="number">0</span>] + w[<span class="number">0</span>][<span class="number">1</span>] &lt; w[<span class="number">1</span>][<span class="number">1</span>] + w[<span class="number">0</span>][<span class="number">0</span>])&#123;</span><br><span class="line">                ans = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(i == n)&#123;</span><br><span class="line">                <span class="keyword">if</span>(w[<span class="number">1</span>][<span class="number">0</span>] != w[<span class="number">1</span>][<span class="number">1</span>] || w[<span class="number">0</span>][<span class="number">1</span>] != w[<span class="number">0</span>][<span class="number">0</span>]) ans = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">puts</span>(ans ? <span class="string">&quot;YES&quot;</span> : <span class="string">&quot;NO&quot;</span>);</span><br><span class="line">        <span class="keyword">if</span>(ans)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) cout &lt;&lt; t[i]; cout &lt;&lt; endl;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) <span class="keyword">if</span>(s[i] == <span class="string">&#x27;0&#x27;</span>) t[i] = t[i] == <span class="string">&#x27;(&#x27;</span> ? <span class="string">&#x27;)&#x27;</span> : <span class="string">&#x27;(&#x27;</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) cout &lt;&lt; t[i]; cout &lt;&lt; endl;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="D-3-Coloring"><a href="#D-3-Coloring" class="headerlink" title="D 3-Coloring"></a>D <a target="_blank" rel="noopener" href="https://codeforces.com/contest/1504/problem/D">3-Coloring</a></h2><p>题目大意：交互题，n*n的方格染色，一共有三种颜色，相邻的格子不能有同样的颜色，每次操作是首先程序给我们一个不能使用的颜色，我们来选择剩下的两种颜色之一，输出给哪个格子染这个颜色，最终要求把所有格子都合法的染完。</p>
+<p>解法：简单的看一下n*n的格子图，我们可以把整张图可以将所有格子分为两类，分类方法就是斜线，显然斜着的一行格子之间不会有任何点相邻，而奇数斜线行格子之间的所有格子都不相邻，偶数行也同理。</p>
+<p>1 0 1</p>
+<p>0 1 0</p>
+<p>1 0 1</p>
+<p>就像这样将所有点分为两类。由于这两类之中，每一类任两个点都不相邻，所以我们可以使用以下策略：用颜色1来填第一类点，那么只要程序禁用颜色1，我们就用颜色2填第二类。必然会有一类先填完，而剩下如果是第一类，就用颜色1和颜色3来填，由于有两种颜色他没办法全部禁用，同理如果剩下的是第二类，我们就用颜色2和颜色3来填剩下的第二类格子。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> T, n, m, x, y, b, c1, c2, l1 = <span class="number">1</span>, l2 = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    cin &gt;&gt; n, T = n * n, c1 = <span class="number">1</span>, c2 = <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">while</span>(T--)&#123;</span><br><span class="line">        cin &gt;&gt; m;</span><br><span class="line">        <span class="keyword">if</span>(l1 &lt;= n &amp;&amp; l2 &lt;= n)&#123;</span><br><span class="line">            <span class="keyword">if</span>(m != <span class="number">1</span>)&#123;</span><br><span class="line">                x = l1, y = c1, c1 += <span class="number">2</span>, b = <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">if</span>(c1 &gt; n) l1++, c1 = <span class="number">1</span> + !(l1 &amp; <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                x = l2, y = c2, c2 += <span class="number">2</span>, b = <span class="number">2</span>;</span><br><span class="line">                <span class="keyword">if</span>(c2 &gt; n) l2++, c2 = <span class="number">1</span> + (l2 &amp; <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(m == <span class="number">3</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(l1 &lt;= n)&#123;</span><br><span class="line">                    x = l1, y = c1, c1 += <span class="number">2</span>, b = <span class="number">1</span>;</span><br><span class="line">                    <span class="keyword">if</span>(c1 &gt; n) l1++, c1 = <span class="number">1</span> + !(l1 &amp; <span class="number">1</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(l2 &lt;= n)&#123;</span><br><span class="line">                    x = l2, y = c2, c2 += <span class="number">2</span>, b = <span class="number">2</span>;</span><br><span class="line">                    <span class="keyword">if</span>(c2 &gt; n) l2++, c2 = <span class="number">1</span> + (l2 &amp; <span class="number">1</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">if</span>(l1 &lt;= n)&#123;</span><br><span class="line">                    x = l1, y = c1, c1 += <span class="number">2</span>;</span><br><span class="line">                    <span class="keyword">if</span>(c1 &gt; n) l1++, c1 = <span class="number">1</span> + !(l1 &amp; <span class="number">1</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(l2 &lt;= n)&#123;</span><br><span class="line">                    x = l2, y = c2, c2 += <span class="number">2</span>;</span><br><span class="line">                    <span class="keyword">if</span>(c2 &gt; n) l2++, c2 = <span class="number">1</span> + (l2 &amp; <span class="number">1</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                b = <span class="number">3</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; b &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; x &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; y &lt;&lt; endl, cout.<span class="built_in">flush</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="E-Travelling-Salesman-Problem"><a href="#E-Travelling-Salesman-Problem" class="headerlink" title="E Travelling Salesman Problem"></a>E <a target="_blank" rel="noopener" href="https://codeforces.com/contest/1504/problem/E">Travelling Salesman Problem</a></h2><p>题目大意：有n个点，任两个点i,j之间的通行花费是max(ci,aj-ai)，问从1点出发遍历所有点均一次最后回到1点的方案。</p>
+<p>解法：观察题面，实际上就是完全图然后找一个长为n的最小环，每个点都被遍历一次，那么实际上他就和1作为起点关系不大了，因为它是一个环。那么朴素的枚举起点显然是过不了的，我们考虑这个加边的时候取通行花费的max(ci,aj-ai)，显然如果当前的点ai很大，那么它通向所有的点的花费都是ci，而每个点出发的花费最少就是ci，于是假如我们的起点是ai最大的点，那么可以通过对剩下的点的a数组进行排序做到每一条路径花费都是最少的。但是因为这是个环，那么现在问题出现在了怎么从最小的点回到最大的点上，如果直接回的话可能会很劣，所以我们可以转换思路，先使用最小的代价从a值最小的点走到a值最大的点，然后再从a最大的点走去其他点，而最终一点是会落在a最小的点上，这样是比刚才的方法更优的。</p>
+<p>由于ci的存在，实际上对于一个点来说所有满足于aj&lt;=ai+ci的点代价都是最优的，那么我们就从最小的点开始看他全部通过最小代价能走的最大的点是谁，之后从那个点开始继续向上找，直到找到a值最大的点（也就是查找max{aj+cj  (j满足aj∈[0,ai+ci])  然后令i=j，重复操作}）。假如当前ai+ci就是最大的，那就要产生额外花费了，就得去查找第一个大于ai+ci的aj，然后令i=j重复上述操作了。</p>
+<p>这个做法的正确性是显然的，为了朴素的维护这样的一个做法可以使用权值线段树，然后就做出来了。不过好像这题是有On做法的，也有更加方便的写法，但是我个人比较笨，没有去往哪里想，估计也想不到，就这样在cf上用Onlogn水过去了hhhhhh。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">po</span>&#123;</span></span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> l, r, w;</span><br><span class="line">&#125;t[<span class="number">200005</span> * <span class="number">40</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> ans, n, cnt = <span class="number">1</span>, rt, mx, a[<span class="number">300005</span>], c[<span class="number">300005</span>], b[<span class="number">300005</span>], mn = <span class="number">3000000001</span>, st = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">change</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> L, <span class="keyword">long</span> <span class="keyword">long</span> R, <span class="keyword">long</span> <span class="keyword">long</span> x, <span class="keyword">long</span> <span class="keyword">long</span> w, <span class="keyword">long</span> <span class="keyword">long</span> &amp;k)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!k) k = ++cnt;</span><br><span class="line">    <span class="keyword">if</span>(L == R)&#123;</span><br><span class="line">        t[k].w = <span class="built_in">max</span>(t[k].w, w);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> mid = (L + R) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(x &lt;= mid) <span class="built_in">change</span>(L, mid, x, w, t[k].l);</span><br><span class="line">    <span class="keyword">else</span> <span class="built_in">change</span>(mid + <span class="number">1</span>, R, x, w, t[k].r);</span><br><span class="line">    t[k].w = <span class="built_in">max</span>(t[t[k].l].w, t[t[k].r].w);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">que</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> L, <span class="keyword">long</span> <span class="keyword">long</span> R, <span class="keyword">long</span> <span class="keyword">long</span> l, <span class="keyword">long</span> <span class="keyword">long</span> r, <span class="keyword">long</span> <span class="keyword">long</span> k)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!k) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(L == l &amp;&amp; R == r) <span class="keyword">return</span> t[k].w;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> mid = (L + R) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(r &lt;= mid) <span class="keyword">return</span> <span class="built_in">que</span>(L, mid, l, r, t[k].l);</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(l &gt; mid) <span class="keyword">return</span> <span class="built_in">que</span>(mid + <span class="number">1</span>, R, l, r, t[k].r);</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="built_in">max</span>(<span class="built_in">que</span>(L, mid, l, mid, t[k].l), <span class="built_in">que</span>(mid + <span class="number">1</span>, R, mid + <span class="number">1</span>, r, t[k].r));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">long</span> <span class="keyword">long</span> i = <span class="number">1</span>; i &lt;= n; i++)&#123;</span><br><span class="line">        cin &gt;&gt; a[i] &gt;&gt; c[i];</span><br><span class="line">        b[i] = a[i], ans += c[i], mx = <span class="built_in">max</span>(mx, a[i] + c[i]);</span><br><span class="line">        <span class="keyword">if</span>(mn &gt;= a[i]) mn = a[i], st = i; </span><br><span class="line">        rt = <span class="number">1</span>, <span class="built_in">change</span>(<span class="number">0LL</span>, <span class="number">3000000000LL</span>, a[i], a[i] + c[i], rt);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">sort</span>(b + <span class="number">1</span>, b + <span class="number">1</span> + n);</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> now = a[st] + c[st], pro;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">        pro = <span class="built_in">que</span>(<span class="number">0LL</span>, <span class="number">3000000000LL</span>, <span class="number">0LL</span>, now, <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">if</span>(now == mx) <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">if</span>(pro == now)&#123;</span><br><span class="line">            pro = <span class="built_in">upper_bound</span>(b + <span class="number">1</span>, b + n + <span class="number">1</span>, now) - b;</span><br><span class="line">            pro = b[pro], ans += pro - now;</span><br><span class="line">        &#125;</span><br><span class="line">        now = <span class="built_in">max</span>(now, pro);</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="F-Flip-the-Cards"><a href="#F-Flip-the-Cards" class="headerlink" title="F Flip the Cards"></a>F <a target="_blank" rel="noopener" href="https://codeforces.com/contest/1504/problem/F">Flip the Cards</a></h2><p>题目大意：n张卡片，一共是有1~2n，2n个数字印在卡片的正反两面上，操作是可以翻转某些卡片，最终要求所有正面的数字排完序之后，背面的数字是相反的大小顺序。</p>
+<p>解法：假如某一张卡片上印的两个数字都大于n或者小于等于n，那这种情况显然不合法（证明还是比较好证的，设一下算一下就能看出矛盾了）。所以现在我们的每张卡片都是印着一个1<del>n的和一个n+1</del>2n的数字。我们首先假装所有的1<del>n都朝同一面，并且是按从1</del>n有序排好的，那么对于这样的情况来说，假如第一张卡片翻转了，它就一定出现在当前序列的最后，因为它的另一面显然比n要大，而这一面显然比n+1要小，进而当我们翻转第二张时，它一定根据大小关系放在刚刚翻转的那张前边，以此类推。于是我们可以得到一个合法的序列（假如翻转的时候放不到指定的位置，那整个情况都是不合法的），接下来讨论最优解，实际上我们再观察最终排好的序列，会发现整个序列的可以分成几个段的，每一段之间都互不影响，也就是说如果我们有k张牌，k张牌里1<del>n区间内的最大值-最小值是k且n+1</del>2n区间内的最大值减去最小值也是k，那么这个区间内的大小关系就只要在这个区间内自己处理就好。最后我们回到这个问题，最优解就是各个区间的最优解加到一起，而区间内的最优值就是假如刚才找出的情况中：要翻的卡片数多，我们就把所有不要翻转的翻一下；如果要翻的卡片数小我们就直接翻转这些卡片。最终我们扫一遍，扫到一个区间就给答案加上这个区间的最小值，就得到了答案。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt; bits/stdc++.h &gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, ans, x, y, a[<span class="number">400005</span>], b[<span class="number">400005</span>], c[<span class="number">400005</span>], cnt, fl, pro[<span class="number">2</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n), fl = n + <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;x, &amp;y), a[x] = y, a[y] = x, b[x] = b[y] = (x &lt; y);</span><br><span class="line">    x = y = <span class="number">2</span> * n + <span class="number">1</span>, cnt = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(a[i] &gt; y || a[i] &lt;= n) fl = <span class="number">-1</span>;</span><br><span class="line">		<span class="keyword">if</span>(a[i] &lt; x) x = a[i], c[i] = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">else</span> y = a[i], c[i] = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span>(x == <span class="number">2</span> * n - i + <span class="number">1</span>)&#123;</span><br><span class="line">			<span class="keyword">while</span>(cnt &lt;= i) pro[c[cnt] ^ b[cnt]]++, cnt++;</span><br><span class="line">			ans += <span class="built_in">min</span>(pro[<span class="number">0</span>], pro[<span class="number">1</span>]), pro[<span class="number">0</span>] = pro[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="built_in">min</span>(fl, ans));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>后边还有div1的两道题，实在是做不动了就先放着了，只看div2方面的题目还是比较不错的，类型比较丰富，需要想的内容要比代码写的内容多得多。蛮不错的。</p>
+
+            </div>
+            
+                <div class="kratos-copyright text-center clearfix">
+                    <h5>本作品采用 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
+                </div>
+            
+            <footer class="kratos-entry-footer clearfix">
+                
+                    <div class="post-like-donate text-center clearfix" id="post-like-donate">
+                    
+                    
+                        <a class="share" href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
+                        <div class="share-wrap" style="display: none;">
+    <div class="share-group">
+        <a href="javascript:;" class="share-plain qq" onclick="share('qq');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-qq"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain qzone" onclick="share('qzone');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-star"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weixin pop style-plain" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weixin"></i>
+            </div>
+            <div class="share-int">
+                <div class="qrcode" id="wechat-qr"></div>
+                <p>打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</p>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weibo" onclick="share('weibo');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weibo"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain facebook style-plain" onclick="share('facebook');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-facebook"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain twitter style-plain" onclick="share('twitter');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-twitter"></i>
+            </div>
+        </a>
+    </div>
+    <script type="text/javascript">
+        $(()=>{
+            new QRCode("wechat-qr", {
+                text: "http://sosupro.github.io/2021/04/23/Codeforces%20Round%20#712%20(Div.%202)(cf%20contest%201504)/",
+                width: 150,
+                height: 150,
+                correctLevel : QRCode.CorrectLevel.H
+            });
+        });
+        function share(dest) {
+            const qqBase        = "https://connect.qq.com/widget/shareqq/index.html?";
+            const weiboBase     = "https://service.weibo.com/share/share.php?";
+            const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
+            const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
+            const twitterBase   = "https://twitter.com/intent/tweet?";
+            const hostUrl       = "http://sosupro.github.io/2021/04/23/Codeforces%20Round%20#712%20(Div.%202)(cf%20contest%201504)/";
+            const title         = "「」";
+            const excerpt       = `Codeforces Round #712 (Div. 2)(cf contest 1504)A Déjà Vu题目大意：给字符串添加一个字母a让它不是一个回文串。
+解法：扫一遍，只要能加就加。
+1234567891011121314...`;
+            let _URL;
+            switch (dest) {
+                case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
+                case "weibo"    : _URL = weiboBase+"url="+hostUrl+"&title="+title+excerpt;                                 break;
+                case "qzone"    : _URL = qzoneBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";  break;
+                case "facebook" : _URL = facebookBase+"u="+hostUrl;                                                        break;
+                case "twitter"  : _URL = twitterBase+"text="+title+excerpt+"&url="+hostUrl;                                break;
+            }
+            window.open(_URL);
+        };
+    </script>
+</div>
+                    
+                    </div>
+                
+                <div class="footer-tag clearfix">
+                    <div class="pull-left">
+                    <i class="fa fa-tags"></i>
+                        
+                    </div>
+                    <div class="pull-date">
+                    <span>最后编辑：2021-04-16</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
+            <nav class="navigation post-navigation clearfix" role="navigation">
+                
+                <div class="nav-previous clearfix">
+                    <a title=" (无标题)" href="/2021/04/23/CodeCraft-21 and Codeforces Round #711 (Div. 2)(cf contest 1498)/">&lt; 上一篇</a>
+                </div>
+                
+                
+                <div class="nav-next clearfix">
+                    <a title=" (无标题)" href="/2021/04/23/Divide by Zero 2021 and Codeforces Round #714 (Div. 2)(httpscodeforces.comcontest1513)/">下一篇 &gt;</a>
+                </div>
+                
+            </nav>
+        
+        
+    </article>
+</section>
+
+                
+            
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/images/avatar.webp" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">一个ICU患者的犯病之路</p>
+    </div>
+</aside>
+            
+                    <div class="sticky-area">
+                
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E9%A1%B9/">杂项</a><span class="category-list-count">1</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/%E6%B0%B4%E6%96%87/" style="font-size: 0.6em;">水文</a>
+      </div>
+  </aside>
+
+            
+                
+  <aside id="krw-posts" class="widget widget-kratos-posts">
+  <h4 class="widget-title"><i class="fa fa-file"></i>最新文章</h4>
+  <div class="tab-content">
+      <ul class="list-group">
+        
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            <a class="list-group-item" href="/2021/04/22/sosusosu-com%E7%A7%BD%E5%9C%9F%E8%BD%AC%E7%94%9F%E4%B8%BAsosusosu-icu/"><i class="fa  fa-book"></i> sosusosu.com秽土转生为sosusosu.icu!</a>
+            
+          
+        
+      </ul>
+  </div>
+  </aside>
+
+            
+    </div>
+</section>
+        
+        </div>
+    </div>
+</div>
+<footer>
+    <div id="footer"  class="ap-lrc"  >
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search/">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="box theme-box" id="darkmode-switch">
+                        <span class="fa fa-adjust"></span>
+                    </div>
+                
+                
+            </div>
+            <div class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                        <li><a href="mailto:3308395526@qq.com"><i class="fa fa-envelope"></i></a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li><a target="_blank" rel="nofollow" href="https://github.com/sosupro"><i class="fa fa-github"></i></a></li>
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2021 松鼠的小站 版权所有.</li>
+                            <li>本站已运行<span id="span_dt">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
+                            <li>Site built with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by sosusosu.</li>
+                        </div>
+                        <div>
+                            <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
+                            <li>Hosted on <a href="https://github.io" target="_blank">Github Pages</a></li>
+                        </div>
+                        <div>
+                            <li><a href="https://beian.miit.gov.cn" rel="external nofollow" target="_blank">ICU备20210101号</a></li>
+                            
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.4/dist/js/bootstrap.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
+<script>const notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));</script>
+
+<script async src="/js/candy.min.js"></script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    <meting-js
+        server="netease"
+        type="playlist"
+        id="5415117912"
+        order="random"
+        fixed="true"
+    >
+    </meting-js>
+
+
+
+    <script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script defer src="/js/kratosr.min.js"></script>
+<script defer src="/js/pjax.min.js"></script>
+
+
+    <script defer src="/js/kr-dark.min.js"></script>
+
+
+
+<!-- Extra support for third-party plguins  -->
+
+
+    </body>
+</html>
