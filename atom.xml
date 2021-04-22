@@ -3,11 +3,11 @@
   <title>松鼠的小站</title>
   
   
-  <link href="http://sosusosu.gitee.io/atom.xml" rel="self"/>
+  <link href="http://sosupro.github.io/atom.xml" rel="self"/>
   
-  <link href="http://sosusosu.gitee.io/"/>
+  <link href="http://sosupro.github.io/"/>
   <updated>2021-04-22T06:28:06.811Z</updated>
-  <id>http://sosusosu.gitee.io/</id>
+  <id>http://sosupro.github.io/</id>
   
   <author>
     <name>sosusosu</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://sosusosu.gitee.io/2021/04/22/hello-world/"/>
-    <id>http://sosusosu.gitee.io/2021/04/22/hello-world/</id>
+    <link href="http://sosupro.github.io/2021/04/22/hello-world/"/>
+    <id>http://sosupro.github.io/2021/04/22/hello-world/</id>
     <published>2021-04-22T06:28:06.811Z</published>
     <updated>2021-04-22T06:28:06.811Z</updated>
     
