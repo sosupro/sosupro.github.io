@@ -4,7 +4,7 @@
   <!-- 元数据 -->
   <meta charset="utf-8">
   <link rel="icon" href="">
-  <title>松鼠的小站</title>
+  <title>Codeforces Round 712 | 松鼠的小站</title>
   <meta name="author" content="sosusosu" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -13,21 +13,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="" />
+    <meta name="keywords" content="cfcontest, codeforces" />
   
   <meta name="description" content="Codeforces Round #712 (Div. 2)(cf contest 1504)A Déjà Vu题目大意：给字符串添加一个字母a让它不是一个回文串。 解法：扫一遍，只要能加就加。 123456789101112131415161718192021222324252627#include &lt;bits&#x2F;stdc++.h&gt;using namespace std;int T,">
 <meta property="og:type" content="article">
-<meta property="og:title" content="松鼠的小站">
-<meta property="og:url" content="http://sosupro.gitee.io/2021/04/23/Codeforces%20Round%20#712%20(Div.%202)(cf%20contest%201504)/index.html">
+<meta property="og:title" content="Codeforces Round 712">
+<meta property="og:url" content="http://sosupro.github.io/2021/04/23/Codeforces-Round-712-Div-2-cf-contest-1504/index.html">
 <meta property="og:site_name" content="松鼠的小站">
 <meta property="og:description" content="Codeforces Round #712 (Div. 2)(cf contest 1504)A Déjà Vu题目大意：给字符串添加一个字母a让它不是一个回文串。 解法：扫一遍，只要能加就加。 123456789101112131415161718192021222324252627#include &lt;bits&#x2F;stdc++.h&gt;using namespace std;int T,">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://sosupro.gitee.io/null">
-<meta property="article:published_time" content="2021-04-22T16:30:07.759Z">
-<meta property="article:modified_time" content="2021-04-16T10:19:22.468Z">
+<meta property="og:image" content="http://sosupro.github.io/null">
+<meta property="article:published_time" content="2021-04-22T16:43:19.000Z">
+<meta property="article:modified_time" content="2021-04-22T16:50:42.384Z">
 <meta property="article:author" content="sosusosu">
+<meta property="article:tag" content="codeforces">
+<meta property="article:tag" content="cfcontest">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://sosupro.gitee.io/null">
+<meta name="twitter:image" content="http://sosupro.github.io/null">
 <meta name="twitter:site" content="@null">
   
   <!-- 站点验证相关 -->
@@ -141,7 +143,7 @@
     <article>
         <div class="kratos-hentry kratos-post-inner clearfix">
             <header class="kratos-entry-header">
-                <h1 class="kratos-entry-title text-center"></h1>
+                <h1 class="kratos-entry-title text-center">Codeforces Round 712</h1>
                 
                 <ul class="kratos-post-meta text-center">
                     <li><i class="fa fa-calendar"></i> 2021-04-23</li>
@@ -159,8 +161,12 @@
             </header>
             <div class="kratos-post-content">
                 <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                    本文最后编辑于 <time datetime="1618568362468"></time> 前，其中的内容可能需要更新。
+                    本文最后编辑于 <time datetime="1619110242384"></time> 前，其中的内容可能需要更新。
                 </div>
+                
+                    <div class="kratos-post-inner-toc">
+                        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Codeforces-Round-712-Div-2-cf-contest-1504"><span class="toc-number">1.</span> <span class="toc-text">Codeforces Round #712 (Div. 2)(cf contest 1504)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#A-Deja-Vu"><span class="toc-number">1.1.</span> <span class="toc-text">A Déjà Vu</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#B-Flip-the-Bits"><span class="toc-number">1.2.</span> <span class="toc-text">B Flip the Bits</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-Balance-the-Bits"><span class="toc-number">1.3.</span> <span class="toc-text">C Balance the Bits</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#D-3-Coloring"><span class="toc-number">1.4.</span> <span class="toc-text">D 3-Coloring</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#E-Travelling-Salesman-Problem"><span class="toc-number">1.5.</span> <span class="toc-text">E Travelling Salesman Problem</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#F-Flip-the-Cards"><span class="toc-number">1.6.</span> <span class="toc-text">F Flip the Cards</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">1.7.</span> <span class="toc-text">总结</span></a></li></ol></li></ol>
+                    </div>
                 
                 <hr />
                 <h1 id="Codeforces-Round-712-Div-2-cf-contest-1504"><a href="#Codeforces-Round-712-Div-2-cf-contest-1504" class="headerlink" title="Codeforces Round #712 (Div. 2)(cf contest 1504)"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1504">Codeforces Round #712 (Div. 2)</a>(cf contest 1504)</h1><h2 id="A-Deja-Vu"><a href="#A-Deja-Vu" class="headerlink" title="A Déjà Vu"></a>A <a target="_blank" rel="noopener" href="https://codeforces.com/contest/1504/problem/A">Déjà Vu</a></h2><p>题目大意：给字符串添加一个字母a让它不是一个回文串。</p>
@@ -258,7 +264,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "http://sosupro.gitee.io/2021/04/23/Codeforces%20Round%20#712%20(Div.%202)(cf%20contest%201504)/",
+                text: "http://sosupro.github.io/2021/04/23/Codeforces-Round-712-Div-2-cf-contest-1504/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -270,8 +276,8 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "http://sosupro.gitee.io/2021/04/23/Codeforces%20Round%20#712%20(Div.%202)(cf%20contest%201504)/";
-            const title         = "「」";
+            const hostUrl       = "http://sosupro.github.io/2021/04/23/Codeforces-Round-712-Div-2-cf-contest-1504/";
+            const title         = "「Codeforces Round 712」";
             const excerpt       = `Codeforces Round #712 (Div. 2)(cf contest 1504)A Déjà Vu题目大意：给字符串添加一个字母a让它不是一个回文串。
 解法：扫一遍，只要能加就加。
 1234567891011121314...`;
@@ -293,10 +299,10 @@
                 <div class="footer-tag clearfix">
                     <div class="pull-left">
                     <i class="fa fa-tags"></i>
-                        
+                        <a class="tag-none-link" href="/tags/cfcontest/" rel="tag">cfcontest</a>, <a class="tag-none-link" href="/tags/codeforces/" rel="tag">codeforces</a>
                     </div>
                     <div class="pull-date">
-                    <span>最后编辑：2021-04-16</span>
+                    <span>最后编辑：2021-04-23</span>
                     </div>
                 </div>
             </footer>
@@ -305,12 +311,12 @@
             <nav class="navigation post-navigation clearfix" role="navigation">
                 
                 <div class="nav-previous clearfix">
-                    <a title=" (无标题)" href="/2021/04/23/CodeCraft-21 and Codeforces Round #711 (Div. 2)(cf contest 1498)/">&lt; 上一篇</a>
+                    <a title=" CodeCraft-21 and Codeforces Round 711" href="/2021/04/23/CodeCraft-21-and-Codeforces-Round-711-Div-2-cf-contest-1498/">&lt; 上一篇</a>
                 </div>
                 
                 
                 <div class="nav-next clearfix">
-                    <a title=" (无标题)" href="/2021/04/23/Divide by Zero 2021 and Codeforces Round #714 (Div. 2)(httpscodeforces.comcontest1513)/">下一篇 &gt;</a>
+                    <a title=" Divide by Zero 2021 and Codeforces Round 714" href="/2021/04/23/Divide-by-Zero-2021-and-Codeforces-Round-714-Div-2-cf-contest1513/">下一篇 &gt;</a>
                 </div>
                 
             </nav>
@@ -340,10 +346,22 @@
             
                     <div class="sticky-area">
                 
+                    <aside id="krw-toc" class="widget widget-kratos-toc clearfix">
+    <div class="photo-background"></div>
+    <h4 class="widget-title no-after">
+        <i class="fa fa-compass"></i>
+        文章目录
+        <span class="toc-progress-bar"></span>
+    </h4>
+    <div class="textwidget">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Codeforces-Round-712-Div-2-cf-contest-1504"><span class="toc-text">Codeforces Round #712 (Div. 2)(cf contest 1504)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#A-Deja-Vu"><span class="toc-text">A Déjà Vu</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#B-Flip-the-Bits"><span class="toc-text">B Flip the Bits</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-Balance-the-Bits"><span class="toc-text">C Balance the Bits</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#D-3-Coloring"><span class="toc-text">D 3-Coloring</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#E-Travelling-Salesman-Problem"><span class="toc-text">E Travelling Salesman Problem</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#F-Flip-the-Cards"><span class="toc-text">F Flip the Cards</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol></li></ol>
+    </div>
+</aside>
+                
                 
   <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E9%A1%B9/">杂项</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E9%A1%B9/">杂项</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%AD%E7%BB%83/">训练</a><span class="category-list-count">4</span></li></ul>
   </aside>
 
 
@@ -352,7 +370,7 @@
   <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
     <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
       <div class="tag-clouds">
-        <a href="/tags/%E6%B0%B4%E6%96%87/" style="font-size: 0.6em;">水文</a>
+        <a href="/tags/cfcontest/" style="font-size: 0.8em;">cfcontest</a> <a href="/tags/codeforces/" style="font-size: 0.8em;">codeforces</a> <a href="/tags/%E6%B0%B4%E6%96%87/" style="font-size: 0.6em;">水文</a>
       </div>
   </aside>
 
@@ -366,14 +384,26 @@
         
           
           
-        
-          
-          
-        
-          
+            <a class="list-group-item" href="/2021/04/23/Educational-Codeforces-Round-107-Rated-for-Div-2-cf-contest-1511/"><i class="fa  fa-book"></i> Educational Codeforces Round 107</a>
+            
           
         
           
+          
+            <a class="list-group-item" href="/2021/04/23/Divide-by-Zero-2021-and-Codeforces-Round-714-Div-2-cf-contest1513/"><i class="fa  fa-book"></i> Divide by Zero 2021 and Codeforces Round 714</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2021/04/23/Codeforces-Round-712-Div-2-cf-contest-1504/"><i class="fa  fa-book"></i> Codeforces Round 712</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2021/04/23/CodeCraft-21-and-Codeforces-Round-711-Div-2-cf-contest-1498/"><i class="fa  fa-book"></i> CodeCraft-21 and Codeforces Round 711</a>
+            
           
         
           
